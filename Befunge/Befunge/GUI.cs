@@ -175,7 +175,7 @@ namespace Befunge {
 		private void ResetHandler(object sender, EventArgs e) {
 			p = null;
 			if (editedText != null && editedText != originalText)
-				textArea.Text = originalText.TrimEnd();
+				textArea.Text = (originalText ?? textArea.Text).TrimEnd();
 			originalText = null;
 			UpdateStreams();
 		}
@@ -221,11 +221,14 @@ namespace Befunge {
 				dialog.Filter = "bf files (*.bf)|*.bf|All files (*.*)|*.*";
 				dialog.FilterIndex = 0;
 				dialog.RestoreDirectory = false;
+				DialogResult r = dialog.ShowDialog();
 
-				if (dialog.ShowDialog() == DialogResult.OK) {
+				if (r == DialogResult.OK) {
 					fileStr = dialog.FileName;
 					currentFile = fileStr;
 				}
+				else
+					return;
 			}
 			try {
 				using (StreamWriter sr = new StreamWriter(fileStr)) {
