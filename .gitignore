@@ -91,6 +91,8 @@ $RECYCLE.BIN/
 
 *.csproj
 
+*.resx
+
 *.manifest
 Befunge/Befunge/obj/Debug/Befunge.csproj.FileListAbsolute.txt
 Befunge/Befunge/obj/Debug/Befunge.csproj.GenerateResource.Cache
