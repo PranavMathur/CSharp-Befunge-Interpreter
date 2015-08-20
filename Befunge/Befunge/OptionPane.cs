@@ -50,7 +50,7 @@ namespace Befunge {
 			return result;
 		}
 
-		public static DialogResult ShowInputDialog(ref string input, string str) {
+		public static DialogResult ShowInputDialog(out string input, string str) {
 			Size size = new Size(200, 100);
 			Form inputBox = new Form();
 
@@ -67,7 +67,6 @@ namespace Befunge {
 			TextBox textBox = new TextBox();
 			textBox.Size = new Size(size.Width - 10, 23);
 			textBox.Location = new Point(5, 30);
-			textBox.Text = input;
 			inputBox.Controls.Add(textBox);
 
 			Button okButton = new Button();

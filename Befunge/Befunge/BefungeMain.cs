@@ -17,7 +17,7 @@ namespace Befunge {
 			if (args.Length == 0) {
 				Application.Run(new GUI());
 			}
-			else {
+			else if (args.Length == 1) {
 				Application.Run(new GUI(args[0]));
 			}
 		}
