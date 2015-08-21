@@ -240,5 +240,9 @@ namespace Befunge {
 			}
 		}
 
+		private void ShortcutHandler(object sender, KeyEventArgs e) {
+			
+		}
+
 	}
 }

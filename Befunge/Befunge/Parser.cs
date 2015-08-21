@@ -199,13 +199,13 @@ namespace Befunge {
 						currentDir = NewDirection(1);
 					}
 					break;
-				case "\"": //pushes the string in the playfield onto the stack
+				case @"""": //pushes the string in the playfield onto the stack
 					InterpretString();
 					break;
 				case ":": //duplicates the value on the top of the stack
 					interpreter.Duplicate();
 					break;
-				case "\\": //swaps the values on the top of the stack
+				case @"\": //swaps the values on the top of the stack
 					interpreter.Swap();
 					break;
 				case "$": //disposes of the top value of the stack

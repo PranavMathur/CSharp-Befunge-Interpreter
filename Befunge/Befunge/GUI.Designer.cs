@@ -155,47 +155,47 @@
 			// runToolStripMenuItem1
 			// 
 			this.runToolStripMenuItem1.Name = "runToolStripMenuItem1";
-			this.runToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+			this.runToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
 			this.runToolStripMenuItem1.Text = "Run";
 			this.runToolStripMenuItem1.Click += new System.EventHandler(this.RunHandler);
 			// 
 			// walkToolStripMenuItem
 			// 
 			this.walkToolStripMenuItem.Name = "walkToolStripMenuItem";
-			this.walkToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.walkToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
 			this.walkToolStripMenuItem.Text = "Walk";
 			this.walkToolStripMenuItem.Click += new System.EventHandler(this.WalkHandler);
 			// 
 			// crawlToolStripMenuItem
 			// 
 			this.crawlToolStripMenuItem.Name = "crawlToolStripMenuItem";
-			this.crawlToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.crawlToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
 			this.crawlToolStripMenuItem.Text = "Crawl";
 			this.crawlToolStripMenuItem.Click += new System.EventHandler(this.CrawlHandler);
 			// 
 			// stepToolStripMenuItem
 			// 
 			this.stepToolStripMenuItem.Name = "stepToolStripMenuItem";
-			this.stepToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.stepToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
 			this.stepToolStripMenuItem.Text = "Step";
 			this.stepToolStripMenuItem.Click += new System.EventHandler(this.StepHandler);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(124, 6);
 			// 
 			// resetToolStripMenuItem
 			// 
 			this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-			this.resetToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.resetToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
 			this.resetToolStripMenuItem.Text = "Reset";
 			this.resetToolStripMenuItem.Click += new System.EventHandler(this.ResetHandler);
 			// 
 			// terminateToolStripMenuItem
 			// 
 			this.terminateToolStripMenuItem.Name = "terminateToolStripMenuItem";
-			this.terminateToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.terminateToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
 			this.terminateToolStripMenuItem.Text = "Terminate";
 			this.terminateToolStripMenuItem.Click += new System.EventHandler(this.TerminateHandler);
 			// 
@@ -272,8 +272,10 @@
 			this.Controls.Add(this.textArea);
 			this.Controls.Add(this.menu);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.KeyPreview = true;
 			this.Name = "GUI";
 			this.Text = "Befunge Interpreter";
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShortcutHandler);
 			this.menu.ResumeLayout(false);
 			this.menu.PerformLayout();
 			this.ResumeLayout(false);
