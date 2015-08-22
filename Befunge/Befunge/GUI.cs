@@ -162,7 +162,9 @@ namespace Befunge {
 				UpdatePositions();
 				p.Advance();
 			}
+
 			UpdateStreams();
+
 			if (p.IsUpdateNeeded()) {
 				UpdateSource();
 			}
@@ -238,10 +240,6 @@ namespace Befunge {
 			catch (Exception ex) {
 				Console.WriteLine("Error: Could not write file to disk. Original error: " + ex.Message);
 			}
-		}
-
-		private void ShortcutHandler(object sender, KeyEventArgs e) {
-			
 		}
 
 	}
