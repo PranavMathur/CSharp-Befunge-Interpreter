@@ -13,6 +13,20 @@ using System.Timers;
 namespace Befunge {
 	public partial class GUI : Form {
 
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
+		static void Main(string[] args) {
+			Application.EnableVisualStyles();
+			if (args.Length == 0) {
+				Application.Run(new GUI());
+			}
+			else if (args.Length == 1) {
+				Application.Run(new GUI(args[0]));
+			}
+		}
+
 		Parser p;
 
 		private int lastX;
